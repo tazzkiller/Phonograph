@@ -95,6 +95,7 @@
     <string name="action_shuffle_playlist">Shuffle playlist</string>
     <string name="action_clear_playing_queue">Clear playing queue</string>
     <string name="action_save_playing_queue">Save playing queue</string>
+    <string name="action_change_tempo">Change Tempo</string>
     <string name="action_go_to_start_directory">Go to start directory</string>
     <string name="action_show_lyrics">Show lyrics</string>
     <string name="light_theme_name">Light</string>
@@ -182,6 +183,7 @@
     <string name="sleep_timer_set">Sleep timer set for %d minutes from now.</string>
     <string name="action_new_playlist">New playlist…</string>
     <string name="new_playlist_title">New playlist</string>
+    <string name="change_tempo_title">Change Tempo</string>
     <string name="grid_size_1">1</string>
     <string name="grid_size_2">2</string>
     <string name="grid_size_3">3</string>

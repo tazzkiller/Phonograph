@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 
+<<<<<<< HEAD:app/src/main/java/com/kabouzeid/gramophone/ui/fragments/player/AbsPlayerFragment.java
 import com.kabouzeid.gramophone.R;
 import com.kabouzeid.gramophone.dialogs.AddToPlaylistDialog;
 import com.kabouzeid.gramophone.dialogs.CreatePlaylistDialog;
@@ -21,6 +22,24 @@ import com.kabouzeid.gramophone.ui.activities.tageditor.SongTagEditorActivity;
 import com.kabouzeid.gramophone.ui.fragments.AbsMusicServiceFragment;
 import com.kabouzeid.gramophone.util.MusicUtil;
 import com.kabouzeid.gramophone.util.NavigationUtil;
+=======
+import com.kabouzeid.dev.gramophone.R;
+import com.kabouzeid.dev.gramophone.dialogs.AddToPlaylistDialog;
+import com.kabouzeid.dev.gramophone.dialogs.CreatePlaylistDialog;
+import com.kabouzeid.dev.gramophone.dialogs.ChangeTempoDialog;
+import com.kabouzeid.dev.gramophone.dialogs.SleepTimerDialog;
+import com.kabouzeid.dev.gramophone.dialogs.SongDetailDialog;
+import com.kabouzeid.dev.gramophone.dialogs.SongShareDialog;
+import com.kabouzeid.dev.gramophone.helper.MusicPlayerRemote;
+import com.kabouzeid.dev.gramophone.interfaces.PaletteColorHolder;
+import com.kabouzeid.dev.gramophone.model.Song;
+import com.kabouzeid.dev.gramophone.service.playback.Playback;
+import com.kabouzeid.dev.gramophone.ui.activities.tageditor.AbsTagEditorActivity;
+import com.kabouzeid.dev.gramophone.ui.activities.tageditor.SongTagEditorActivity;
+import com.kabouzeid.dev.gramophone.ui.fragments.AbsMusicServiceFragment;
+import com.kabouzeid.dev.gramophone.util.MusicUtil;
+import com.kabouzeid.dev.gramophone.util.NavigationUtil;
+>>>>>>> fde5a8e0... Add change tempo feature:app/src/main/java/com/kabouzeid/dev/gramophone/ui/fragments/player/AbsPlayerFragment.java
 
 public abstract class AbsPlayerFragment extends AbsMusicServiceFragment implements Toolbar.OnMenuItemClickListener, PaletteColorHolder {
     public static final String TAG = AbsPlayerFragment.class.getSimpleName();
@@ -68,6 +87,9 @@ public abstract class AbsPlayerFragment extends AbsMusicServiceFragment implemen
                 return true;
             case R.id.action_save_playing_queue:
                 CreatePlaylistDialog.create(MusicPlayerRemote.getPlayingQueue()).show(getActivity().getSupportFragmentManager(), "ADD_TO_PLAYLIST");
+                return true;
+            case R.id.action_change_tempo:
+                ChangeTempoDialog.create().show(getActivity().getSupportFragmentManager(), "CHANGE_TEMPO");
                 return true;
             case R.id.action_tag_editor:
                 Intent intent = new Intent(getActivity(), SongTagEditorActivity.class);

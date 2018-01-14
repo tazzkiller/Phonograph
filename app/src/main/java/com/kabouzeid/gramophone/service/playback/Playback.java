@@ -1,5 +1,6 @@
 package com.kabouzeid.gramophone.service.playback;
 
+import android.media.MediaPlayer;
 import android.support.annotation.Nullable;
 
 /**
@@ -32,6 +33,8 @@ public interface Playback {
     int seek(int whereto);
 
     boolean setVolume(float vol);
+
+    void setTempo(float tempo);
 
     boolean setAudioSessionId(int sessionId);
 
