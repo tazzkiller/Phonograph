@@ -271,19 +271,6 @@ public class MultiPlayer implements Playback, MediaPlayer.OnErrorListener, Media
         }
     }
 
-    @Override
-    public void setTempo(float tempo) {
-        try {
-            boolean wasPaused = !this.isPlaying();
-            mCurrentMediaPlayer.setPlaybackParams(mCurrentMediaPlayer.getPlaybackParams().setSpeed(tempo));
-            if (wasPaused) {
-                this.pause();
-            }
-        } catch (IllegalStateException e) {
-            return;
-        }
-    }
-
     /**
      * Sets the audio session ID.
      *

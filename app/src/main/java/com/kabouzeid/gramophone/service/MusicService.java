@@ -893,10 +893,6 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         }
     }
 
-    public Playback getPlayback() {
-        return playback;
-    }
-
     public int getPreviousPosition(boolean force) {
         int newPosition = getPosition() - 1;
         switch (repeatMode) {
